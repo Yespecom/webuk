@@ -1,0 +1,53 @@
+# Yesp — UK Operational Excellence, Digital Transformation & AI Transformation
+
+> Yesp is a UK management consultancy that helps mid-market businesses (50–500 employees) transform operations. Yesp diagnoses operational problems first, then builds the systems that fix them — including a working prototype delivered as part of the fixed-fee assessment. Yesp is the UK practice of Yesp Studio, a global technology partner operating across India, UK, US, and Germany.
+
+## What Yesp Does
+
+Yesp delivers three connected services for UK mid-market businesses:
+
+1. **Operational Excellence** — Process mapping, KPI frameworks, bottleneck elimination, and reporting system builds. You leave with a working prototype, not a slide deck.
+2. **Digital Transformation** — System integration, workflow automation, data platform build, and real-time BI. Connects disconnected systems and ends spreadsheet chaos.
+3. **AI Transformation** — AI readiness assessment, use case prioritisation, pilot development, and deployment tied to agreed ROI metrics.
+
+## How Yesp Engages
+
+Every engagement starts with a fixed-fee Transformation Assessment:
+
+- **Duration:** 2–3 weeks
+- **Deliverables:** 6 — Current State Assessment, Opportunity Register, ROI Analysis, 90-Day Roadmap, Executive Presentation, Working Prototype
+- **Key differentiator:** The Working Prototype is built on the client's actual data, ready to show their board, included in the fixed fee
+- **Engagement model:** Assess → Transform → Optimise
+
+## Key Facts
+
+- Fixed-fee assessment (no surprise costs)
+- 100% senior-led delivery — no hand-offs to junior teams after scoping
+- Vendor neutral — no software commissions
+- Diagnosis-first methodology — never recommends before understanding
+- UK mid-market focus: logistics, manufacturing, distribution, retail, supply chain, professional services
+- Contact: hello@yesp.uk
+- Business hours: Mon–Fri, 09:00–17:30 (UK)
+
+## Research
+
+Yesp publishes field research drawn from direct client work:
+
+- **Report 001 — The Hidden Cost of Operational Reporting in UK SMEs:** Manual reporting consumes 1,040+ hours per year in a typical UK SME — more than six months of full-time work. Full report: https://yesp.uk/research/hidden-cost-of-operational-reporting
+- **Report 002 — AI Readiness in UK Mid-Market: The Foundation Gap:** 73% of UK mid-market businesses attempting AI transformation fail at the foundation layer — not the technology layer. Full report: https://yesp.uk/research/ai-readiness-foundation-gap
+
+## Pages
+
+- Homepage: https://yesp.uk/
+- Services: https://yesp.uk/services
+- Assessment: https://yesp.uk/assessment
+- Research: https://yesp.uk/research
+- Why Yesp: https://yesp.uk/why-yesp
+- Framework: https://yesp.uk/framework
+- Industries: https://yesp.uk/industries
+- Team: https://yesp.uk/team
+- Careers: https://yesp.uk/careers
+
+## Parent Company
+
+Yesp Studio — global technology partner delivering AI, data engineering, and enterprise transformation across India, UK, US, and Germany. Website: https://yespstudio.com
