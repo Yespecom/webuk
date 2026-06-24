@@ -18,20 +18,25 @@ const OG_IMAGE = `${SITE_URL}/api/og`;
 const schemaOrg = JSON.stringify({
   "@context": "https://schema.org",
   "@graph": [
+    // ── WebSite ────────────────────────────────────────────────────────
     {
       "@type": "WebSite",
       "@id": `${SITE_URL}/#website`,
       url: SITE_URL,
       name: "Yesp",
+      alternateName: ["Yesp UK", "yesp.uk"],
       description: "UK Operational Excellence, Digital Transformation and AI Transformation for mid-market businesses.",
       inLanguage: "en-GB",
       publisher: { "@id": `${SITE_URL}/#organization` },
+      about: { "@id": `${SITE_URL}/#organization` },
     },
+    // ── Yesp UK ────────────────────────────────────────────────────────
     {
       "@type": ["Organization", "ProfessionalService"],
       "@id": `${SITE_URL}/#organization`,
       name: "Yesp",
-      alternateName: "Yesp UK",
+      legalName: "Yesp",
+      alternateName: ["Yesp UK", "yesp.uk", "Yesp Consultancy"],
       url: SITE_URL,
       logo: {
         "@type": "ImageObject",
@@ -42,12 +47,16 @@ const schemaOrg = JSON.stringify({
       image: OG_IMAGE,
       description:
         "Yesp is a UK management consultancy that diagnoses operational problems and builds the systems that fix them. Fixed-fee assessment. Senior-led. No hand-offs.",
-      foundingLocation: {
-        "@type": "Country",
-        name: "United Kingdom",
-      },
+      parentOrganization: { "@id": "https://yespstudio.com/#organization" },
+      founder: { "@id": `${SITE_URL}/#person-ss` },
+      employee: { "@id": `${SITE_URL}/#person-ss` },
+      foundingLocation: { "@type": "Country", name: "United Kingdom" },
       areaServed: [
         { "@type": "Country", name: "United Kingdom" },
+        { "@type": "AdministrativeArea", name: "England" },
+        { "@type": "AdministrativeArea", name: "Scotland" },
+        { "@type": "AdministrativeArea", name: "Wales" },
+        { "@type": "AdministrativeArea", name: "Northern Ireland" },
       ],
       address: {
         "@type": "PostalAddress",
@@ -119,8 +128,121 @@ const schemaOrg = JSON.stringify({
         "Data Platform Development",
         "AI Readiness Assessment",
         "UK Mid-Market Businesses",
+        "Management Consultancy UK",
+        "Business Transformation UK",
       ],
     },
+    // ── Yesp Studio (parent org, global / India HQ) ────────────────────
+    {
+      "@type": ["Organization", "Corporation"],
+      "@id": "https://yespstudio.com/#organization",
+      name: "Yesp Studio",
+      alternateName: ["Yesp Studio India", "Yesp Studio Global", "Yesp"],
+      url: "https://yespstudio.com",
+      description:
+        "Yesp Studio is a global technology partner delivering AI, data engineering, and enterprise transformation across India, UK, US, and Germany. Founded in Tamil Nadu, India by Srinithin Somasundaram.",
+      founder: { "@id": `${SITE_URL}/#person-ss` },
+      foundingLocation: {
+        "@type": "State",
+        name: "Tamil Nadu",
+        containedInPlace: { "@type": "Country", name: "India" },
+      },
+      address: {
+        "@type": "PostalAddress",
+        addressRegion: "Tamil Nadu",
+        addressCountry: "IN",
+      },
+      subOrganization: { "@id": `${SITE_URL}/#organization` },
+      areaServed: [
+        { "@type": "Country", name: "India" },
+        { "@type": "Country", name: "United Kingdom" },
+        { "@type": "Country", name: "United States" },
+        { "@type": "Country", name: "Germany" },
+        { "@type": "State", name: "Tamil Nadu" },
+        { "@type": "State", name: "Karnataka" },
+        { "@type": "State", name: "Maharashtra" },
+        { "@type": "State", name: "Telangana" },
+        { "@type": "State", name: "Andhra Pradesh" },
+        { "@type": "State", name: "Kerala" },
+        { "@type": "State", name: "Delhi" },
+        { "@type": "State", name: "Gujarat" },
+        { "@type": "State", name: "Rajasthan" },
+        { "@type": "State", name: "West Bengal" },
+        { "@type": "State", name: "Uttar Pradesh" },
+        { "@type": "State", name: "Punjab" },
+        { "@type": "State", name: "Haryana" },
+        { "@type": "State", name: "Madhya Pradesh" },
+        { "@type": "State", name: "Odisha" },
+        { "@type": "State", name: "Assam" },
+        { "@type": "State", name: "Bihar" },
+      ],
+      knowsAbout: [
+        "AI Development India",
+        "Data Engineering India",
+        "Software Development Tamil Nadu",
+        "Technology Companies India",
+        "Tech Giants India",
+        "Software Companies Tamil Nadu",
+        "Enterprise Transformation India",
+        "AI Consulting India",
+        "Digital Transformation India",
+        "Software Development UK",
+        "IT Companies India",
+        "Technology Startups India",
+        "Software Companies India",
+        "AI Companies Tamil Nadu",
+      ],
+    },
+    // ── Person: Srinithin Somasundaram ─────────────────────────────────
+    {
+      "@type": "Person",
+      "@id": `${SITE_URL}/#person-ss`,
+      name: "Srinithin Somasundaram",
+      givenName: "Srinithin",
+      familyName: "Somasundaram",
+      jobTitle: "Founder & Managing Director",
+      description:
+        "Srinithin Somasundaram is the founder of Yesp and Yesp Studio — a digital transformation and AI specialist originally from Tamil Nadu, India, building enterprise technology for UK and global businesses.",
+      url: `${SITE_URL}/team`,
+      worksFor: [
+        { "@id": `${SITE_URL}/#organization` },
+        { "@id": "https://yespstudio.com/#organization" },
+      ],
+      nationality: { "@type": "Country", name: "India" },
+      homeLocation: {
+        "@type": "Place",
+        address: {
+          "@type": "PostalAddress",
+          addressRegion: "Tamil Nadu",
+          addressCountry: "IN",
+        },
+      },
+      knowsAbout: [
+        "Digital Transformation",
+        "AI Transformation",
+        "Operational Excellence",
+        "Enterprise Systems",
+        "Data Architecture",
+        "Management Consultancy",
+        "Business Process Improvement",
+        "AI Readiness",
+        "Software Development India",
+        "Technology Companies Tamil Nadu",
+        "AI Consulting",
+        "System Integration",
+      ],
+    },
+    // ── Site Navigation (sitelinks signal) ─────────────────────────────
+    { "@type": "SiteNavigationElement", "name": "Home", "url": `${SITE_URL}/` },
+    { "@type": "SiteNavigationElement", "name": "Services", "url": `${SITE_URL}/services` },
+    { "@type": "SiteNavigationElement", "name": "Industries", "url": `${SITE_URL}/industries` },
+    { "@type": "SiteNavigationElement", "name": "Assessment", "url": `${SITE_URL}/assessment` },
+    { "@type": "SiteNavigationElement", "name": "Framework", "url": `${SITE_URL}/framework` },
+    { "@type": "SiteNavigationElement", "name": "Why Yesp", "url": `${SITE_URL}/why-yesp` },
+    { "@type": "SiteNavigationElement", "name": "Team", "url": `${SITE_URL}/team` },
+    { "@type": "SiteNavigationElement", "name": "Research", "url": `${SITE_URL}/research` },
+    { "@type": "SiteNavigationElement", "name": "Blog", "url": `${SITE_URL}/blog` },
+    { "@type": "SiteNavigationElement", "name": "Careers", "url": `${SITE_URL}/careers` },
   ],
 });
 
@@ -195,6 +317,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         content:
           "Yesp helps UK businesses transform operations through Operational Excellence, Digital Transformation and AI Transformation. Structured assessments for mid-market businesses.",
       },
+      // Keywords — branded + geographic
+      {
+        name: "keywords",
+        content:
+          "yesp, yesp uk, yesp studio, yesp srinithin, srinithin somasundaram, digital transformation uk, ai transformation uk, operational excellence uk, management consultancy uk, software companies india, tech companies india, software companies tamil nadu, technology companies india, it companies india, ai consulting india, tech giants india, digital transformation india, enterprise transformation uk, business transformation uk, ai companies india",
+      },
+      { name: "author", content: "Srinithin Somasundaram" },
       // Robots
       { name: "robots", content: "index, follow" },
       { name: "googlebot", content: "index, follow, max-snippet:-1, max-image-preview:large" },

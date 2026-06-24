@@ -3,13 +3,82 @@ import { ArrowUpRight, CheckCircle2 } from "lucide-react";
 import { SiteNav } from "@/components/site/SiteNav";
 import { SiteFooter } from "@/components/site/SiteFooter";
 
+const personSchema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://yesp.uk/team#webpage",
+      url: "https://yesp.uk/team",
+      name: "Team | Yesp",
+      description: "Meet Srinithin Somasundaram — founder of Yesp and Yesp Studio, digital transformation specialist from Tamil Nadu, India, building AI and enterprise solutions for UK businesses.",
+      isPartOf: { "@id": "https://yesp.uk/#website" },
+      about: { "@id": "https://yesp.uk/#person-ss" },
+      breadcrumb: {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: "https://yesp.uk/" },
+          { "@type": "ListItem", position: 2, name: "Team", item: "https://yesp.uk/team" },
+        ],
+      },
+    },
+    {
+      "@type": "Person",
+      "@id": "https://yesp.uk/#person-ss",
+      name: "Srinithin Somasundaram",
+      givenName: "Srinithin",
+      familyName: "Somasundaram",
+      jobTitle: "Founder & Managing Director",
+      description:
+        "Srinithin Somasundaram is the founder of Yesp and Yesp Studio — a digital transformation and AI specialist originally from Tamil Nadu, India, building enterprise technology for UK and global businesses. He leads strategy and delivery across AI transformation, digital transformation, and operational excellence for UK mid-market businesses.",
+      url: "https://yesp.uk/team",
+      image: "https://yesp.uk/api/og",
+      worksFor: [
+        { "@id": "https://yesp.uk/#organization" },
+        { "@id": "https://yespstudio.com/#organization" },
+      ],
+      nationality: { "@type": "Country", name: "India" },
+      homeLocation: {
+        "@type": "Place",
+        address: {
+          "@type": "PostalAddress",
+          addressRegion: "Tamil Nadu",
+          addressCountry: "IN",
+        },
+      },
+      knowsAbout: [
+        "Digital Transformation",
+        "AI Transformation",
+        "Operational Excellence",
+        "Enterprise Systems",
+        "Data Architecture",
+        "Management Consultancy",
+        "Business Process Improvement",
+        "AI Readiness",
+        "Software Development India",
+        "Technology Companies Tamil Nadu",
+      ],
+    },
+  ],
+});
+
 export const Route = createFileRoute("/team")({
   head: () => ({
     meta: [
-      { title: "Team | Yesp" },
-      { name: "description", content: "The people behind Yesp. Senior consultants with real delivery track records — no junior hand-offs, no black-box models." },
-      { property: "og:title", content: "Team | Yesp" },
-      { property: "og:description", content: "Senior-led delivery. Meet the people behind Yesp's Digital Transformation, AI, and Operational Excellence practice." },
+      { title: "Srinithin Somasundaram — Founder | Yesp" },
+      {
+        name: "description",
+        content:
+          "Srinithin Somasundaram — founder of Yesp and Yesp Studio. Digital transformation and AI specialist from Tamil Nadu, India, delivering operational excellence and enterprise technology for UK businesses.",
+      },
+      {
+        name: "keywords",
+        content:
+          "srinithin somasundaram, yesp srinithin, yesp founder, yesp studio founder, digital transformation specialist india, ai transformation india, management consultant tamil nadu, technology founder india, software company india, yesp uk team",
+      },
+      { property: "og:title", content: "Srinithin Somasundaram — Founder | Yesp" },
+      { property: "og:description", content: "Founder of Yesp and Yesp Studio. Digital transformation and AI specialist from Tamil Nadu, India, building enterprise technology for UK and global businesses." },
+      { "script:ld+json": personSchema },
     ],
     links: [{ rel: "canonical", href: "https://yesp.uk/team" }],
   }),

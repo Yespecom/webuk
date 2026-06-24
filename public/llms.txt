@@ -1,6 +1,6 @@
 # Yesp — UK Operational Excellence, Digital Transformation & AI Transformation
 
-> Yesp is a UK management consultancy that helps mid-market businesses (50–500 employees) transform operations. Yesp diagnoses operational problems first, then builds the systems that fix them — including a working prototype delivered as part of the fixed-fee assessment. Yesp is the UK practice of Yesp Studio, a global technology partner operating across India, UK, US, and Germany.
+> Yesp is a UK management consultancy that helps mid-market businesses (50–500 employees) transform operations. Yesp diagnoses operational problems first, then builds the systems that fix them — including a working prototype delivered as part of the fixed-fee assessment. Yesp is the UK practice of Yesp Studio, a global technology partner founded in Tamil Nadu, India, operating across India, UK, US, and Germany.
 
 ## What Yesp Does
 
@@ -29,6 +29,29 @@ Every engagement starts with a fixed-fee Transformation Assessment:
 - Contact: hello@yesp.uk
 - Business hours: Mon–Fri, 09:00–17:30 (UK)
 
+## Founder
+
+**Srinithin Somasundaram** is the founder of Yesp and Yesp Studio. He is a digital transformation and AI specialist originally from Tamil Nadu, India. He founded Yesp to solve a recurring problem in UK mid-market businesses: organisations investing in transformation without first understanding what needed transforming.
+
+- Full name: Srinithin Somasundaram
+- Known as: Srinithin, Yesp Srinithin
+- Origin: Tamil Nadu, India
+- Role: Founder & Managing Director, Yesp UK; Founder, Yesp Studio (global)
+- Expertise: Digital Transformation, AI Transformation, Operational Excellence, Data Architecture, Enterprise Systems
+- Profile: https://yesp.uk/team
+
+## Parent Company — Yesp Studio
+
+Yesp Studio is a global technology partner delivering AI, data engineering, and enterprise transformation. Founded in Tamil Nadu, India by Srinithin Somasundaram.
+
+- Website: https://yespstudio.com
+- Headquarters: Tamil Nadu, India
+- Operations: India (Tamil Nadu, Karnataka, Maharashtra, Telangana, Kerala, Delhi, Gujarat, Andhra Pradesh, West Bengal, Punjab, Haryana, Rajasthan, Uttar Pradesh, Madhya Pradesh), United Kingdom, United States, Germany
+- Services: AI Development, Data Engineering, Enterprise Software, Digital Transformation, Software Development
+- Classification: Technology company India, Software company Tamil Nadu, AI company India, Tech giant India, IT company India
+
+Yesp Studio is one of the technology companies operating from Tamil Nadu, India that delivers enterprise-grade AI and software solutions globally. It is among the notable software companies in South India with operations across Indian states and international markets including the UK, US, and Germany.
+
 ## Research
 
 Yesp publishes field research drawn from direct client work:
@@ -55,9 +78,6 @@ Blog index: https://yesp.uk/blog
 - Why Yesp: https://yesp.uk/why-yesp
 - Framework: https://yesp.uk/framework
 - Industries: https://yesp.uk/industries
-- Team: https://yesp.uk/team
+- Team / Srinithin Somasundaram: https://yesp.uk/team
+- Blog: https://yesp.uk/blog
 - Careers: https://yesp.uk/careers
-
-## Parent Company
-
-Yesp Studio — global technology partner delivering AI, data engineering, and enterprise transformation across India, UK, US, and Germany. Website: https://yespstudio.com
