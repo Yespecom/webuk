@@ -1,15 +1,8 @@
 import { Link } from "@tanstack/react-router";
-import { useState } from "react";
-import { ArrowUpRight, Loader2 } from "lucide-react";
-import { toast } from "sonner";
+import { ArrowUpRight } from "lucide-react";
 import logoImg from "@/assets/yesp-logo.png";
-import { sendContactEmail } from "@/lib/api/contact.functions";
 
 export function SiteFooter() {
-  const [form, setForm] = useState({ name: "", email: "", message: "" });
-  const [pending, setPending] = useState(false);
-  const [sent, setSent] = useState(false);
-
   const cols: Record<string, { label: string; to?: string; href?: string }[]> = {
     Explore: [
       { label: "Services", to: "/services" },
@@ -50,11 +43,11 @@ export function SiteFooter() {
 
   return (
     <footer className="ink-glow grain relative overflow-hidden border-t border-[var(--ink-border)] bg-[var(--ink)] text-white">
-      {/* Contact form strip */}
+      {/* Contact strip */}
       <div className="relative z-10 border-b border-white/[0.07]">
         <div className="container-x py-12 md:py-16">
-          <div className="grid gap-8 md:gap-12 lg:grid-cols-12">
-            <div className="lg:col-span-5">
+          <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+            <div>
               <p className="text-xs uppercase tracking-[0.22em] text-white/50">Start a conversation</p>
               <h2 className="mt-3 text-2xl leading-tight md:text-3xl">
                 Send us a message.
@@ -69,86 +62,15 @@ export function SiteFooter() {
                 hello@yesp.uk <ArrowUpRight className="h-3.5 w-3.5" />
               </a>
             </div>
-
-            <div className="lg:col-span-7">
-              {sent ? (
-                <div className="flex h-full items-center border border-white/15 p-8">
-                  <div>
-                    <div className="text-2xl font-medium">Message received.</div>
-                    <p className="mt-3 text-sm text-white/60">
-                      We'll be in touch within one UK business day.
-                    </p>
-                    <button
-                      onClick={() => setSent(false)}
-                      className="mt-6 text-sm text-white/50 underline underline-offset-4 hover:text-white transition-colors"
-                    >
-                      Send another message
-                    </button>
-                  </div>
-                </div>
-              ) : (
-                <form onSubmit={handleSubmit} className="space-y-3">
-                  <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
-                    <div>
-                      <label className="mb-1.5 block text-xs uppercase tracking-[0.18em] text-white/50">
-                        Name
-                      </label>
-                      <input
-                        type="text"
-                        required
-                        placeholder="Your name"
-                        value={form.name}
-                        onChange={(e) => setForm((f) => ({ ...f, name: e.target.value }))}
-                        className="w-full border border-white/[0.12] bg-white/[0.04] px-4 py-3 text-sm text-white placeholder-white/25 outline-none transition-all duration-200 focus:border-white/35 focus:bg-white/[0.07]"
-                      />
-                    </div>
-                    <div>
-                      <label className="mb-1.5 block text-xs uppercase tracking-[0.18em] text-white/50">
-                        Email
-                      </label>
-                      <input
-                        type="email"
-                        required
-                        placeholder="your@company.co.uk"
-                        value={form.email}
-                        onChange={(e) => setForm((f) => ({ ...f, email: e.target.value }))}
-                        className="w-full border border-white/[0.12] bg-white/[0.04] px-4 py-3 text-sm text-white placeholder-white/25 outline-none transition-all duration-200 focus:border-white/35 focus:bg-white/[0.07]"
-                      />
-                    </div>
-                  </div>
-                  <div>
-                    <label className="mb-1.5 block text-xs uppercase tracking-[0.18em] text-white/50">
-                      Message
-                    </label>
-                    <textarea
-                      required
-                      rows={4}
-                      placeholder="Tell us about your business and what you're trying to solve..."
-                      value={form.message}
-                      onChange={(e) => setForm((f) => ({ ...f, message: e.target.value }))}
-                      className="w-full resize-none border border-white/[0.12] bg-white/[0.04] px-4 py-3 text-sm text-white placeholder-white/25 outline-none transition-all duration-200 focus:border-white/35 focus:bg-white/[0.07]"
-                    />
-                  </div>
-                  <button
-                    type="submit"
-                    disabled={pending}
-                    className="w-full sm:w-auto inline-flex items-center justify-center gap-3 border border-white bg-white px-6 py-3.5 text-sm font-medium text-[var(--ink)] transition-colors hover:bg-white/90 disabled:cursor-not-allowed disabled:opacity-60"
-                  >
-                    {pending ? (
-                      <>
-                        <Loader2 className="h-4 w-4 animate-spin" />
-                        Sending…
-                      </>
-                    ) : (
-                      <>
-                        Send Message
-                        <ArrowUpRight className="h-4 w-4" />
-                      </>
-                    )}
-                  </button>
-                </form>
-              )}
-            </div>
+            <a
+              href="https://yespstudio.com/contact"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group inline-flex shrink-0 items-center gap-2 bg-white px-6 py-3.5 text-sm font-semibold text-[var(--ink)] transition-all duration-200 hover:bg-white/92 hover:shadow-lg"
+            >
+              Get in touch
+              <ArrowUpRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+            </a>
           </div>
         </div>
       </div>
