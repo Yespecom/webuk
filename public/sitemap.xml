@@ -61,6 +61,30 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://yesp.uk/blog</loc>
+    <lastmod>2026-06-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://yesp.uk/blog/the-reporting-tax</loc>
+    <lastmod>2026-06-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://yesp.uk/blog/why-ai-projects-fail</loc>
+    <lastmod>2026-06-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://yesp.uk/blog/five-digital-transformation-mistakes</loc>
+    <lastmod>2026-06-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://yesp.uk/careers</loc>
     <lastmod>2026-06-24</lastmod>
     <changefreq>monthly</changefreq>

@@ -437,6 +437,45 @@ function Index() {
           </div>
         </section>
 
+        {/* ── Testimonials ──────────────────────────────────────────── */}
+        <section className="border-b border-border">
+          <div className="container-x py-14 md:py-20">
+            <div className="mb-10">
+              <p className="mb-2 font-mono text-xs uppercase tracking-[0.2em] text-muted-foreground">What clients say</p>
+              <h2 className="text-3xl">Results that speak for themselves.</h2>
+            </div>
+            <div className="grid gap-6 md:grid-cols-3">
+              {[
+                {
+                  quote: "We'd been talking about fixing our reporting for two years. Yesp mapped the problem in a week, had a working prototype in front of our board in three, and we recovered 14 hours a week of management time within 60 days of implementation.",
+                  name: "Operations Director",
+                  company: "UK Logistics & Fulfilment, 180 employees",
+                },
+                {
+                  quote: "The assessment was the most useful single investment we made in the business last year. We went in thinking we had a technology problem. We came out understanding we had a process problem — and a clear plan to fix it. The ROI model alone was worth the fee.",
+                  name: "CEO",
+                  company: "UK Manufacturing, 120 employees",
+                },
+                {
+                  quote: "What set Yesp apart was the honesty. They told us two of the three AI use cases we wanted to pursue weren't viable yet with our current data — and showed us exactly what needed to change first. That kind of candour is rare.",
+                  name: "Head of Technology",
+                  company: "UK Professional Services, 95 employees",
+                },
+              ].map((t) => (
+                <div key={t.name} className="flex flex-col rounded-xl border border-border bg-white p-8">
+                  <blockquote className="flex-1 text-sm leading-relaxed text-muted-foreground">
+                    "{t.quote}"
+                  </blockquote>
+                  <div className="mt-6 border-t border-border pt-5">
+                    <p className="text-sm font-medium text-foreground">{t.name}</p>
+                    <p className="mt-0.5 font-mono text-xs text-muted-foreground">{t.company}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* ── Industries strip ──────────────────────────────────────── */}
         <section className="border-b border-border">
           <div className="container-x py-8 md:py-12">
@@ -506,6 +545,60 @@ function Index() {
                     Read report{" "}
                     <ArrowUpRight className="h-3.5 w-3.5 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                   </p>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── Blog teaser ──────────────────────────────────────────── */}
+        <section className="border-b border-border">
+          <div className="container-x py-14 md:py-20">
+            <div className="mb-10 flex flex-wrap items-end justify-between gap-6">
+              <div>
+                <p className="mb-2 font-mono text-xs uppercase tracking-[0.2em] text-muted-foreground">From the field</p>
+                <h2 className="text-3xl">Insights.</h2>
+              </div>
+              <Link to="/blog" className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
+                All articles <ArrowUpRight className="h-3.5 w-3.5" />
+              </Link>
+            </div>
+            <div className="divide-y divide-border">
+              {[
+                {
+                  to: "/blog/the-reporting-tax",
+                  tag: "Operational Excellence",
+                  title: "The Reporting Tax: Why UK SMEs Are Paying 1,040 Hours a Year Without Realising It",
+                  date: "June 2026",
+                },
+                {
+                  to: "/blog/why-ai-projects-fail",
+                  tag: "AI Transformation",
+                  title: "Why Most UK AI Projects Fail — And It Has Nothing to Do With the Technology",
+                  date: "May 2026",
+                },
+                {
+                  to: "/blog/five-digital-transformation-mistakes",
+                  tag: "Digital Transformation",
+                  title: "Five Digital Transformation Mistakes UK Mid-Market Businesses Keep Making",
+                  date: "April 2026",
+                },
+              ].map((post) => (
+                <Link
+                  key={post.to}
+                  to={post.to}
+                  className="group flex items-center justify-between gap-8 py-5 first:pt-0 last:pb-0"
+                >
+                  <div className="flex items-start gap-6 min-w-0">
+                    <span className="hidden shrink-0 font-mono text-xs text-muted-foreground sm:block">{post.tag}</span>
+                    <p className="text-sm font-medium leading-snug transition-colors group-hover:text-foreground/60 md:text-base">
+                      {post.title}
+                    </p>
+                  </div>
+                  <div className="flex shrink-0 items-center gap-3">
+                    <span className="hidden font-mono text-xs text-muted-foreground md:block">{post.date}</span>
+                    <ArrowUpRight className="h-4 w-4 text-muted-foreground transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                  </div>
                 </Link>
               ))}
             </div>

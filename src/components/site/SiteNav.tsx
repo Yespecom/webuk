@@ -115,6 +115,7 @@ export function SiteNav() {
     { label: "Why Yesp", to: "/why-yesp" },
     { label: "Team", to: "/team" },
     { label: "Research", to: "/research" },
+    { label: "Blog", to: "/blog" },
   ] as const;
 
   return (

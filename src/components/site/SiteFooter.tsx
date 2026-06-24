@@ -16,6 +16,7 @@ export function SiteFooter() {
       { label: "Industries", to: "/industries" },
       { label: "Assessment", to: "/assessment" },
       { label: "Research", to: "/research" },
+      { label: "Blog", to: "/blog" },
     ],
     Company: [
       { label: "Why Yesp", to: "/why-yesp" },

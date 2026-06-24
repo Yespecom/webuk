@@ -17,11 +17,16 @@ import { Route as IndustriesRouteImport } from './routes/industries'
 import { Route as FrameworkRouteImport } from './routes/framework'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as CareersRouteImport } from './routes/careers'
+import { Route as BlogRouteImport } from './routes/blog'
 import { Route as AssessmentRouteImport } from './routes/assessment'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ResearchIndexRouteImport } from './routes/research.index'
 import { Route as ResearchHiddenCostOfOperationalReportingRouteImport } from './routes/research.hidden-cost-of-operational-reporting'
 import { Route as ResearchAiReadinessFoundationGapRouteImport } from './routes/research.ai-readiness-foundation-gap'
+import { Route as BlogIndexRouteImport } from './routes/blog.index'
+import { Route as BlogTheReportingTaxRouteImport } from './routes/blog.the-reporting-tax'
+import { Route as BlogWhyAiProjectsFailRouteImport } from './routes/blog.why-ai-projects-fail'
+import { Route as BlogFiveDigitalTransformationMistakesRouteImport } from './routes/blog.five-digital-transformation-mistakes'
 import { Route as ApiOgRouteImport } from './routes/api/og'
 
 const WhyYespRoute = WhyYespRouteImport.update({
@@ -64,6 +69,11 @@ const CareersRoute = CareersRouteImport.update({
   path: '/careers',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BlogRoute = BlogRouteImport.update({
+  id: '/blog',
+  path: '/blog',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const AssessmentRoute = AssessmentRouteImport.update({
   id: '/assessment',
   path: '/assessment',
@@ -91,6 +101,27 @@ const ResearchAiReadinessFoundationGapRoute =
     path: '/ai-readiness-foundation-gap',
     getParentRoute: () => ResearchRoute,
   } as any)
+const BlogIndexRoute = BlogIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => BlogRoute,
+} as any)
+const BlogTheReportingTaxRoute = BlogTheReportingTaxRouteImport.update({
+  id: '/the-reporting-tax',
+  path: '/the-reporting-tax',
+  getParentRoute: () => BlogRoute,
+} as any)
+const BlogWhyAiProjectsFailRoute = BlogWhyAiProjectsFailRouteImport.update({
+  id: '/why-ai-projects-fail',
+  path: '/why-ai-projects-fail',
+  getParentRoute: () => BlogRoute,
+} as any)
+const BlogFiveDigitalTransformationMistakesRoute =
+  BlogFiveDigitalTransformationMistakesRouteImport.update({
+    id: '/five-digital-transformation-mistakes',
+    path: '/five-digital-transformation-mistakes',
+    getParentRoute: () => BlogRoute,
+  } as any)
 const ApiOgRoute = ApiOgRouteImport.update({
   id: '/api/og',
   path: '/api/og',
@@ -100,6 +131,7 @@ const ApiOgRoute = ApiOgRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/assessment': typeof AssessmentRoute
+  '/blog': typeof BlogRouteWithChildren
   '/careers': typeof CareersRoute
   '/contact': typeof ContactRoute
   '/framework': typeof FrameworkRoute
@@ -109,6 +141,10 @@ export interface FileRoutesByFullPath {
   '/team': typeof TeamRoute
   '/why-yesp': typeof WhyYespRoute
   '/api/og': typeof ApiOgRoute
+  '/blog/': typeof BlogIndexRoute
+  '/blog/the-reporting-tax': typeof BlogTheReportingTaxRoute
+  '/blog/why-ai-projects-fail': typeof BlogWhyAiProjectsFailRoute
+  '/blog/five-digital-transformation-mistakes': typeof BlogFiveDigitalTransformationMistakesRoute
   '/research/ai-readiness-foundation-gap': typeof ResearchAiReadinessFoundationGapRoute
   '/research/hidden-cost-of-operational-reporting': typeof ResearchHiddenCostOfOperationalReportingRoute
   '/research/': typeof ResearchIndexRoute
@@ -124,6 +160,10 @@ export interface FileRoutesByTo {
   '/team': typeof TeamRoute
   '/why-yesp': typeof WhyYespRoute
   '/api/og': typeof ApiOgRoute
+  '/blog': typeof BlogIndexRoute
+  '/blog/the-reporting-tax': typeof BlogTheReportingTaxRoute
+  '/blog/why-ai-projects-fail': typeof BlogWhyAiProjectsFailRoute
+  '/blog/five-digital-transformation-mistakes': typeof BlogFiveDigitalTransformationMistakesRoute
   '/research/ai-readiness-foundation-gap': typeof ResearchAiReadinessFoundationGapRoute
   '/research/hidden-cost-of-operational-reporting': typeof ResearchHiddenCostOfOperationalReportingRoute
   '/research': typeof ResearchIndexRoute
@@ -132,6 +172,7 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/assessment': typeof AssessmentRoute
+  '/blog': typeof BlogRouteWithChildren
   '/careers': typeof CareersRoute
   '/contact': typeof ContactRoute
   '/framework': typeof FrameworkRoute
@@ -141,6 +182,10 @@ export interface FileRoutesById {
   '/team': typeof TeamRoute
   '/why-yesp': typeof WhyYespRoute
   '/api/og': typeof ApiOgRoute
+  '/blog/': typeof BlogIndexRoute
+  '/blog/the-reporting-tax': typeof BlogTheReportingTaxRoute
+  '/blog/why-ai-projects-fail': typeof BlogWhyAiProjectsFailRoute
+  '/blog/five-digital-transformation-mistakes': typeof BlogFiveDigitalTransformationMistakesRoute
   '/research/ai-readiness-foundation-gap': typeof ResearchAiReadinessFoundationGapRoute
   '/research/hidden-cost-of-operational-reporting': typeof ResearchHiddenCostOfOperationalReportingRoute
   '/research/': typeof ResearchIndexRoute
@@ -150,6 +195,7 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/assessment'
+    | '/blog'
     | '/careers'
     | '/contact'
     | '/framework'
@@ -159,6 +205,10 @@ export interface FileRouteTypes {
     | '/team'
     | '/why-yesp'
     | '/api/og'
+    | '/blog/'
+    | '/blog/the-reporting-tax'
+    | '/blog/why-ai-projects-fail'
+    | '/blog/five-digital-transformation-mistakes'
     | '/research/ai-readiness-foundation-gap'
     | '/research/hidden-cost-of-operational-reporting'
     | '/research/'
@@ -174,6 +224,10 @@ export interface FileRouteTypes {
     | '/team'
     | '/why-yesp'
     | '/api/og'
+    | '/blog'
+    | '/blog/the-reporting-tax'
+    | '/blog/why-ai-projects-fail'
+    | '/blog/five-digital-transformation-mistakes'
     | '/research/ai-readiness-foundation-gap'
     | '/research/hidden-cost-of-operational-reporting'
     | '/research'
@@ -181,6 +235,7 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/assessment'
+    | '/blog'
     | '/careers'
     | '/contact'
     | '/framework'
@@ -190,6 +245,10 @@ export interface FileRouteTypes {
     | '/team'
     | '/why-yesp'
     | '/api/og'
+    | '/blog/'
+    | '/blog/the-reporting-tax'
+    | '/blog/why-ai-projects-fail'
+    | '/blog/five-digital-transformation-mistakes'
     | '/research/ai-readiness-foundation-gap'
     | '/research/hidden-cost-of-operational-reporting'
     | '/research/'
@@ -198,6 +257,7 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AssessmentRoute: typeof AssessmentRoute
+  BlogRoute: typeof BlogRouteWithChildren
   CareersRoute: typeof CareersRoute
   ContactRoute: typeof ContactRoute
   FrameworkRoute: typeof FrameworkRoute
@@ -267,6 +327,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CareersRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/blog': {
+      id: '/blog'
+      path: '/blog'
+      fullPath: '/blog'
+      preLoaderRoute: typeof BlogRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/assessment': {
       id: '/assessment'
       path: '/assessment'
@@ -280,6 +347,34 @@ declare module '@tanstack/react-router' {
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
+    }
+    '/blog/': {
+      id: '/blog/'
+      path: '/'
+      fullPath: '/blog/'
+      preLoaderRoute: typeof BlogIndexRouteImport
+      parentRoute: typeof BlogRoute
+    }
+    '/blog/the-reporting-tax': {
+      id: '/blog/the-reporting-tax'
+      path: '/the-reporting-tax'
+      fullPath: '/blog/the-reporting-tax'
+      preLoaderRoute: typeof BlogTheReportingTaxRouteImport
+      parentRoute: typeof BlogRoute
+    }
+    '/blog/why-ai-projects-fail': {
+      id: '/blog/why-ai-projects-fail'
+      path: '/why-ai-projects-fail'
+      fullPath: '/blog/why-ai-projects-fail'
+      preLoaderRoute: typeof BlogWhyAiProjectsFailRouteImport
+      parentRoute: typeof BlogRoute
+    }
+    '/blog/five-digital-transformation-mistakes': {
+      id: '/blog/five-digital-transformation-mistakes'
+      path: '/five-digital-transformation-mistakes'
+      fullPath: '/blog/five-digital-transformation-mistakes'
+      preLoaderRoute: typeof BlogFiveDigitalTransformationMistakesRouteImport
+      parentRoute: typeof BlogRoute
     }
     '/research/': {
       id: '/research/'
@@ -312,6 +407,22 @@ declare module '@tanstack/react-router' {
   }
 }
 
+interface BlogRouteChildren {
+  BlogIndexRoute: typeof BlogIndexRoute
+  BlogTheReportingTaxRoute: typeof BlogTheReportingTaxRoute
+  BlogWhyAiProjectsFailRoute: typeof BlogWhyAiProjectsFailRoute
+  BlogFiveDigitalTransformationMistakesRoute: typeof BlogFiveDigitalTransformationMistakesRoute
+}
+
+const BlogRouteChildren: BlogRouteChildren = {
+  BlogIndexRoute: BlogIndexRoute,
+  BlogTheReportingTaxRoute: BlogTheReportingTaxRoute,
+  BlogWhyAiProjectsFailRoute: BlogWhyAiProjectsFailRoute,
+  BlogFiveDigitalTransformationMistakesRoute: BlogFiveDigitalTransformationMistakesRoute,
+}
+
+const BlogRouteWithChildren = BlogRoute._addFileChildren(BlogRouteChildren)
+
 interface ResearchRouteChildren {
   ResearchAiReadinessFoundationGapRoute: typeof ResearchAiReadinessFoundationGapRoute
   ResearchHiddenCostOfOperationalReportingRoute: typeof ResearchHiddenCostOfOperationalReportingRoute
@@ -332,6 +443,7 @@ const ResearchRouteWithChildren = ResearchRoute._addFileChildren(
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AssessmentRoute: AssessmentRoute,
+  BlogRoute: BlogRouteWithChildren,
   CareersRoute: CareersRoute,
   ContactRoute: ContactRoute,
   FrameworkRoute: FrameworkRoute,

@@ -57,26 +57,57 @@ function TeamPage() {
           <div className="container-x py-16 md:py-24">
             <div className="grid gap-12 md:grid-cols-12 md:gap-16">
 
-              {/* Photo */}
+              {/* Avatar */}
               <div className="md:col-span-3">
-                <div className="flex h-52 w-52 items-center justify-center rounded-2xl bg-secondary md:h-full md:w-full md:max-h-[280px]">
+                <div className="flex h-52 w-52 items-center justify-center rounded-2xl bg-[var(--ink)] md:h-full md:w-full md:max-h-[300px]">
                   <div className="text-center">
-                    <div className="font-mono text-3xl font-semibold text-foreground/20">SS</div>
-                    <p className="mt-2 text-xs text-muted-foreground">Photo coming soon</p>
+                    <div className="font-mono text-4xl font-semibold text-white/30">SS</div>
                   </div>
                 </div>
               </div>
 
               {/* Bio */}
               <div className="md:col-span-9">
-                <div className="mb-1">
+                <div>
                   <h2 className="text-3xl">Srinithin Somasundaram</h2>
-                  <p className="mt-1 text-sm text-muted-foreground">Founder & CEO</p>
+                  <p className="mt-1 text-sm text-muted-foreground">Founder & Managing Director</p>
                 </div>
 
-                <p className="mt-6 text-base leading-relaxed text-muted-foreground">
-                  Owns client strategy, the public point of view, and the operating discipline behind enterprise engagements.
-                </p>
+                <div className="mt-6 flex flex-wrap gap-2">
+                  {["Operational Excellence", "Digital Transformation", "AI Transformation", "Enterprise Systems", "Data Architecture"].map((tag) => (
+                    <span key={tag} className="rounded-full border border-border px-3 py-1 text-xs text-muted-foreground">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+
+                <div className="mt-6 space-y-4 text-sm leading-relaxed text-muted-foreground">
+                  <p>
+                    Srinithin founded Yesp to solve a problem he observed repeatedly across UK mid-market businesses: organisations investing in transformation without first understanding what needed transforming. The result was predictable — expensive implementations that delivered less than promised, processes that were digitised before they were designed, and AI projects that failed at the data layer before the technology was ever the issue.
+                  </p>
+                  <p>
+                    His approach starts with diagnosis. Every engagement at Yesp begins with a structured assessment — mapping operations, systems, data quality, and AI readiness before any recommendation is made. The deliverables are concrete: a current state assessment, a prioritised opportunity register with ROI modelling, a 90-day roadmap, and a working prototype built on the client's actual data.
+                  </p>
+                  <p>
+                    Srinithin leads client strategy and maintains direct involvement in every engagement from scoping through delivery. There are no hand-offs to junior teams after the initial conversation. The people who scope the work are the people who deliver it — a principle that shapes how Yesp is structured and how every project runs.
+                  </p>
+                  <p>
+                    Yesp is the UK practice of Yesp Studio, a global technology partner operating across India, UK, US, and Germany. Srinithin oversees both the UK consulting practice and the broader Yesp Studio group strategy.
+                  </p>
+                </div>
+
+                <div className="mt-8 grid gap-6 border-t border-border pt-8 sm:grid-cols-3">
+                  {[
+                    { label: "Engagement focus", value: "UK mid-market (50–500 employees)" },
+                    { label: "Sectors", value: "Logistics, Manufacturing, Distribution, Retail, Professional Services" },
+                    { label: "Approach", value: "Assess first. Build what needs building." },
+                  ].map((item) => (
+                    <div key={item.label}>
+                      <p className="font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground">{item.label}</p>
+                      <p className="mt-2 text-sm text-foreground">{item.value}</p>
+                    </div>
+                  ))}
+                </div>
               </div>
 
             </div>

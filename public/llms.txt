@@ -36,6 +36,16 @@ Yesp publishes field research drawn from direct client work:
 - **Report 001 — The Hidden Cost of Operational Reporting in UK SMEs:** Manual reporting consumes 1,040+ hours per year in a typical UK SME — more than six months of full-time work. Full report: https://yesp.uk/research/hidden-cost-of-operational-reporting
 - **Report 002 — AI Readiness in UK Mid-Market: The Foundation Gap:** 73% of UK mid-market businesses attempting AI transformation fail at the foundation layer — not the technology layer. Full report: https://yesp.uk/research/ai-readiness-foundation-gap
 
+## Blog / Insights
+
+Practical articles drawn from direct client work:
+
+- **The Reporting Tax** — Why UK SMEs pay 1,040+ hours per year in hidden manual reporting costs, how to calculate your own Reporting Tax, and how to eliminate it: https://yesp.uk/blog/the-reporting-tax
+- **Why Most UK AI Projects Fail** — The three foundation gaps (data, process, ROI definition) that cause 73% of UK mid-market AI projects to fail before the technology is ever an issue: https://yesp.uk/blog/why-ai-projects-fail
+- **Five Digital Transformation Mistakes** — The same five avoidable mistakes appear in every failed UK mid-market transformation: https://yesp.uk/blog/five-digital-transformation-mistakes
+
+Blog index: https://yesp.uk/blog
+
 ## Pages
 
 - Homepage: https://yesp.uk/
