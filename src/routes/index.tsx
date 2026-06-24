@@ -208,11 +208,10 @@ function Index() {
           </div>
 
           <div className="hero-stats border-t border-white/[0.07]">
-            <div className="container-x grid grid-cols-2 md:grid-cols-4">
+            <div className="container-x grid grid-cols-3">
               {[
                 { stat: "2–3 wks", label: "Assessment to working prototype" },
                 { stat: "6", label: "Deliverables incl. working prototype" },
-                { stat: "Fixed fee", label: "No surprise costs, ever" },
                 { stat: "100%", label: "Senior-led, no hand-offs" },
               ].map(({ stat, label }, i) => (
                 <div
